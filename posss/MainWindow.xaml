@@ -1,0 +1,70 @@
+﻿<Window x:Class="posss.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:posss"
+        mc:Ignorable="d"
+        Height="720" Width="1280"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        MouseDown="Ruszamy"
+        >
+    <Border Background="#272537" CornerRadius="20">
+        <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="60" />
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+            <Border Grid.Column="1" Grid.Row="1" CornerRadius="10" Padding="10,10,10,10" Background="#FF1A1925">
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="Dodaj"  Content="Sprzedaż"  MinHeight="50" MinWidth="70" Background="#FF1A1925"  Foreground="White" FontFamily="Consolas" FontWeight="Normal" FontSize="18" BorderBrush="{x:Null}" Click="Sprzedaj_Click">
+                  
+                    </Button>
+                    <Button x:Name="Pokaz"  Content="Baza Produktów"  MinHeight="50" MinWidth="70" Background="#FF1A1925"  Foreground="White" FontFamily="Consolas" FontWeight="Normal" FontSize="18" Margin="50,0,0,0" BorderBrush="{x:Null}" Click="Pokaz_Click" RenderTransformOrigin="0.5,0.5">
+                        <Button.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="0"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Button.RenderTransform>
+                    </Button>
+                    <Button x:Name="Dostawa"  Content="Dostawa"  MinHeight="50" MinWidth="70" Background="#FF1A1925"  Foreground="White" FontFamily="Consolas" FontWeight="Normal" FontSize="18" Margin="50,0,0,0" BorderBrush="{x:Null}" Click="Dostawa_Click">
+
+                    </Button>
+                    <Button x:Name="HisTran"  Content="Historia Transakcji"  MinHeight="50" MinWidth="70" Background="#FF1A1925"  Foreground="White" FontFamily="Consolas" FontWeight="Normal" FontSize="18" Margin="50,0,0,0" BorderBrush="{x:Null}" Click="HisTran_Click" RenderTransformOrigin="0.5,0.5">
+                        <Button.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="0"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Button.RenderTransform>
+                    </Button>
+                </StackPanel>
+            </Border>
+            <Border Grid.Column="4" Grid.Row="1" CornerRadius="10" Padding="10,10,10,10" Background="#FF1A1925">
+                <Button x:Name="Wyjscie" Content="X"  MinHeight="50" MinWidth="20" Background="#FF1A1925"  Foreground="White" FontFamily="Consolas" FontWeight="Normal" FontSize="30" BorderBrush="{x:Null}" Click="Wyjscie_Click"/>
+            </Border>
+            <Border Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="4" CornerRadius="10" Margin="0,20,0,0" Background="#FF1A1925">
+                <StackPanel x:Name="Głowa" Orientation="Vertical"></StackPanel>
+            </Border>
+    </Grid>
+    </Border>
+</Window>
